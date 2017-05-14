@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -85,17 +86,43 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            setTitle(R.string.music);
+            BlankFragment1 fragment=new BlankFragment1();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame,fragment,"fragment1");
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_gallery) {
+            setTitle(R.string.video);
+            BlankFragment2 fragment=new BlankFragment2();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame,fragment,"fragment2");
+            fragmentTransaction.commit();
 
         } else if (id == R.id.nav_slideshow) {
-
+            setTitle(R.string.voice);
+            BlankFragment3 fragment=new BlankFragment3();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame,fragment,"fragment3");
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_manage) {
-
+            setTitle(R.string.favorite);
+            BlankFragment4 fragment=new BlankFragment4();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame,fragment,"fragment4");
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_share) {
-
+            setTitle(R.string.alert);
+            BlankFragment5 fragment=new BlankFragment5();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame,fragment,"fragment5");
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_send) {
-
+            setTitle(R.string.record);
+            BlankFragment6 fragment=new BlankFragment6();
+            FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.frame,fragment,"fragment6");
+            fragmentTransaction.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -103,14 +130,7 @@ public class MainActivity extends AppCompatActivity
         return true;
 
     }
-                public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, music.class);
 
-                //it.putExtra("test",a);
-                startActivity(it);
-                //startActivityForResult(it,TEST);
-                //finish();
-            }
 
 
     }

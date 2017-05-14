@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="array">
+        <item
+            >text_string</item>
+         <item
+             >音樂</item>
+         <item
+             >影片</item>
+         <item
+             >語音</item>
+         <item
+             >我的最愛</item>
+         <item
+             >計時</item>
+         <item
+             >紀錄</item>
+
+    </string-array>
+</resources>
