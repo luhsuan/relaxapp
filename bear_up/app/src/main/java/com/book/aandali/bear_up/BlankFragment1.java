@@ -28,17 +28,24 @@ import java.util.List;
 
 public class BlankFragment1 extends Fragment {
 
-    private  static final   String sdpath=new String("/sdcard/");
-    private List<String> songs=new ArrayList<String>();
-    private MediaPlayer mp=new MediaPlayer();
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return initView(inflater, container);
-
-        //updatePlayList();
-
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_blank, container, false);
     }
+
+//    private  static final   String sdpath=new String("/sdcard/");
+//    private List<String> songs=new ArrayList<String>();
+//    private MediaPlayer mp=new MediaPlayer();
+
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+//        return initView(inflater, container);
+//
+//        //updatePlayList();
+//
+//    }
 
 //    private void updatePlayList() {
 //
@@ -57,9 +64,9 @@ public class BlankFragment1 extends Fragment {
 //
 //    }
 
-    private View initView(LayoutInflater inflater, ViewGroup container) {
-        View view = inflater.inflate(R.layout.fragment_blank, container, false);
-        return view;
-
-    }
+//    private View initView(LayoutInflater inflater, ViewGroup container) {
+//        View view = inflater.inflate(R.layout.fragment_blank, container, false);
+//        return view;
+//
+//    }
 }
