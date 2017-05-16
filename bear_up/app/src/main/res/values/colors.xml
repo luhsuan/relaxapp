@@ -3,8 +3,5 @@
     <color name="colorPrimary">#55936a</color>
     <color name="colorPrimaryDark">#2b5f46</color>
     <color name="colorAccent">#FF4081</color>
-    <selector  name="text_color" xmlns:android="http://schemas.android.com/apk/res/android">
-        <item android:state_pressed="true" android:color="#55936a"/>
-        <item android:state_pressed="false" android:color="#ffffff"/>
-    </selector>
+
 </resources>
