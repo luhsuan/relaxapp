@@ -31,30 +31,30 @@ import java.util.HashMap;
 public class BlankFragment3 extends DialogFragment{
 
     String[] songs={"輕音樂1","輕音樂2","輕音樂3"};
-    int[]  imgbtn={R.drawable.ic_menu_gallery,R.drawable.ic_menu_camera};
+    int[]  imgbtn={R.drawable.ic_menu_gallery,R.drawable.ic_menu_camera,R.drawable.ic_menu_camera};
     ListView listView;
 
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-    }
-
-    public BlankFragment3() {
-        // Required empty public constructor
-    }
+//    public void onActivityCreated(Bundle savedInstanceState) {
+//        super.onActivityCreated(savedInstanceState);
+//
+//    }
+//
+//    public BlankFragment3() {
+//        // Required empty public constructor
+//    }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_blank3, container, false);
-
+       View view=inflater.inflate(R.layout.fragment_blank3, container, false);
        listView=(ListView) view.findViewById(R.id.list);
-        Adapter adapter=new Ada
+
+       voice adapter=new voice(getActivity(),songs,imgbtn);
        // ArrayAdapter<String> ListViewAdapter=new ArrayAdapter<String>(getActivity(),songs,imgbtn);
         listView.setAdapter(adapter);
-        listView.setOnClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new ListView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> a, View v, int pos, long id) {
                 Toast.makeText(getActivity(),songs[pos],Toast.LENGTH_SHORT).show();
