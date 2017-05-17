@@ -31,7 +31,8 @@ import java.util.HashMap;
 public class BlankFragment3 extends DialogFragment{
 
     String[] songs={"輕音樂1","輕音樂2","輕音樂3"};
-    int[]  imgbtn={R.drawable.ic_menu_gallery,R.drawable.ic_menu_camera,R.drawable.ic_menu_camera};
+    int[]  imgbtn={R.drawable.ic_menu_camera,R.drawable.ic_menu_camera,R.drawable.ic_menu_camera};
+    int[]  imgbtnlove={R.drawable.ic_menu_gallery,R.drawable.ic_menu_gallery,R.drawable.ic_menu_gallery};
     ListView listView;
 
 //    public void onActivityCreated(Bundle savedInstanceState) {
@@ -51,17 +52,16 @@ public class BlankFragment3 extends DialogFragment{
        View view=inflater.inflate(R.layout.fragment_blank3, container, false);
        listView=(ListView) view.findViewById(R.id.list);
 
-       voice adapter=new voice(getActivity(),songs,imgbtn);
+       voice adapter=new voice(getActivity(),songs,imgbtn,imgbtnlove);
        // ArrayAdapter<String> ListViewAdapter=new ArrayAdapter<String>(getActivity(),songs,imgbtn);
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new ListView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> a, View v, int pos, long id) {
-                Toast.makeText(getActivity(),songs[pos],Toast.LENGTH_SHORT).show();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getActivity(),songs[position],Toast.LENGTH_SHORT).show();
             }
+        });
 
-
-           });
         return view;
     }
 
