@@ -33,7 +33,7 @@ public class BlankFragment1 extends Fragment {
         ListView listView;
         View view=inflater.inflate(R.layout.fragment_blank, container, false);
         listView=(ListView) view.findViewById(R.id.list1);
-        String[] songs={"輕音樂1","輕音樂2","輕音樂3"};
+        String[] songs={"Children Music.mp3","Days Are Long Silent Partner.mp3","Greenery Silent Partner.mp3","Heart Break  Vibe Tracks.mp3"};
 
         //voice adapter=new voice(getActivity(),songs);
         ArrayAdapter<String> listViewAdapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,songs);
@@ -41,7 +41,7 @@ public class BlankFragment1 extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(),songs[position],Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(),songs[position],Toast.LENGTH_SHORT).show();
             }
         });
 

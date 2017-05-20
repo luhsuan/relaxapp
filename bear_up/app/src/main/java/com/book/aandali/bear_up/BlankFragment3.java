@@ -30,7 +30,7 @@ import java.util.HashMap;
  */
 public class BlankFragment3 extends DialogFragment{
 
-    String[] songs={"輕音樂1","輕音樂2","輕音樂3"};
+    String[] songs={"抗衰老眼部按摩操.mp3","眼睛按摩.mp3","臉部按摩及眼睛放鬆法.mp3"};
     int[]  imgbtn={R.drawable.ic_menu_camera,R.drawable.ic_menu_camera,R.drawable.ic_menu_camera};
     int[]  imgbtnlove={R.drawable.ic_menu_gallery,R.drawable.ic_menu_gallery,R.drawable.ic_menu_gallery};
     ListView listView;
