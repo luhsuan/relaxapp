@@ -91,14 +91,14 @@ public class MainActivity extends AppCompatActivity
                         break;
                     }
 
-                    case R.id.bottomBarItemFourth: {
-                        fragNavController.switchTab(TAB_FOURTH);
-                        BlankFragment4 fragment = new BlankFragment4();
-                        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.replace(R.id.frame, fragment, "fragment4");
-                        fragmentTransaction.commit();
-                        break;
-                    }
+//                    case R.id.bottomBarItemFourth: {
+//                        fragNavController.switchTab(TAB_FOURTH);
+//                        BlankFragment4 fragment = new BlankFragment4();
+//                        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//                        fragmentTransaction.replace(R.id.frame, fragment, "fragment4");
+//                        fragmentTransaction.commit();
+//                        break;
+//                    }
                 }
             }
 
