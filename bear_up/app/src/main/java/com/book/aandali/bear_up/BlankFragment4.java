@@ -13,6 +13,14 @@ import android.view.ViewGroup;
  */
 public class BlankFragment4 extends Fragment {
 
+    public static BlankFragment4 newInstance(int instance) {
+        Bundle args = new Bundle();
+        args.putInt("argsInstance", instance);
+        BlankFragment4 firstFragment = new BlankFragment4();
+        firstFragment.setArguments(args);
+        return firstFragment;
+    }
+
 
     public BlankFragment4() {
         // Required empty public constructor

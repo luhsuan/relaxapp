@@ -25,6 +25,14 @@ import java.util.List;
 
 public class BlankFragment1 extends Fragment {
 
+    public static BlankFragment1 newInstance(int instance) {
+        Bundle args = new Bundle();
+        args.putInt("argsInstance", instance);
+        BlankFragment1 firstFragment = new BlankFragment1();
+        firstFragment.setArguments(args);
+        return firstFragment;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
