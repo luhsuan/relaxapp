@@ -60,44 +60,54 @@ public class BlankFragment3 extends DialogFragment{
         // Inflate the layout for this fragment
        View view=inflater.inflate(R.layout.fragment_blank3, container, false);
        listView=(ListView) view.findViewById(R.id.list);
-
-       voice adapter=new voice(getActivity(),songs,imgbtn,imgbtnlove);
-       // ArrayAdapter<String> ListViewAdapter=new ArrayAdapter<String>(getActivity(),songs,imgbtn);
+        voice adapter=new voice(getActivity(),songs,imgbtn,imgbtnlove);
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        ImageButton btn  = (ImageButton)getView().findViewById(R.id.itemlove);
 
-//                Audio audio = new Audio(context);
-//                audio.playmp301();
-                Toast.makeText(getActivity(),songs[position],Toast.LENGTH_SHORT).show();
-            }
-        });
+        //on click button for paratha
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MediaPlayer paratha = MediaPlayer.create(this, R.raw.a);
+
+                paratha.start();
+
+       // ArrayAdapter<String> ListViewAdapter=new ArrayAdapter<String>(getActivity(),songs,imgbtn);
+
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//
+////                Audio audio = new Audio(context);
+////                audio.playmp301();
+//                Toast.makeText(getActivity(),songs[position],Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         return view;
     }
 
-    public class Audio {
-
-        MediaPlayer mp;
-        Context context;
-
-        public Audio(Context ct) {
-            this.context = ct;
-        }
-
-        public void playmp301() {
-            mp = MediaPlayer.create(context, R.raw.a);
-            mp.start();
-        }
-        public void playmp302() {
-            mp = MediaPlayer.create(context, R.raw.b);
-            mp.start();
-        }
-        public void playmp303() {
-            mp = MediaPlayer.create(context, R.raw.c);
-            mp.start();
-        }
-    }
+//    public class Audio {
+//
+//        MediaPlayer mp;
+//        Context context;
+//
+//        public Audio(Context ct) {
+//            this.context = ct;
+//        }
+//
+//        public void playmp301() {
+//            mp = MediaPlayer.create(context, R.raw.a);
+//            mp.start();
+//        }
+//        public void playmp302() {
+//            mp = MediaPlayer.create(context, R.raw.b);
+//            mp.start();
+//        }
+//        public void playmp303() {
+//            mp = MediaPlayer.create(context, R.raw.c);
+//            mp.start();
+//        }
+//    }
 
 }
