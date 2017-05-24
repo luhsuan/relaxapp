@@ -43,7 +43,7 @@ public class BlankFragment3 extends DialogFragment{
     int[]  imgbtn={R.drawable.ic_menu_camera,R.drawable.ic_menu_camera,R.drawable.ic_menu_camera};
     int[]  imgbtnlove={R.drawable.ic_menu_gallery,R.drawable.ic_menu_gallery,R.drawable.ic_menu_gallery};
     ListView listView;
-
+    Context context;
 //    public void onActivityCreated(Bundle savedInstanceState) {
 //        super.onActivityCreated(savedInstanceState);
 //
@@ -58,21 +58,19 @@ public class BlankFragment3 extends DialogFragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       View view=inflater.inflate(R.layout.fragment_blank3, container, false);
+       View view=inflater.inflate(R.layout.voice3, container, false);
        listView=(ListView) view.findViewById(R.id.list);
         voice adapter=new voice(getActivity(),songs,imgbtn,imgbtnlove);
         listView.setAdapter(adapter);
         ImageButton btn  = (ImageButton)getView().findViewById(R.id.itemlove);
 
-        //on click button for paratha
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MediaPlayer paratha = MediaPlayer.create(this, R.raw.a);
-
+                MediaPlayer paratha = MediaPlayer.create(context, R.raw.a);
                 paratha.start();
-
-       // ArrayAdapter<String> ListViewAdapter=new ArrayAdapter<String>(getActivity(),songs,imgbtn);
+            }
+//        ArrayAdapter<String> ListViewAdapter=new ArrayAdapter<String>(getActivity(),songs,imgbtn);
 
 //        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
@@ -83,9 +81,9 @@ public class BlankFragment3 extends DialogFragment{
 //                Toast.makeText(getActivity(),songs[position],Toast.LENGTH_SHORT).show();
 //            }
 //        });
-
+        });
         return view;
-    }
+            }
 
 //    public class Audio {
 //
@@ -110,4 +108,5 @@ public class BlankFragment3 extends DialogFragment{
 //        }
 //    }
 
-}
+        }
+
