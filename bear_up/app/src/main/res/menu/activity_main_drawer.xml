@@ -17,12 +17,12 @@
             android:title="語音" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_favorite"
             android:title="我的最愛" />
         <item
             android:id="@+id/nav_share"
-            android:icon="@drawable/ic_menu_share"
-            android:title="計時" />
+            android:icon="@drawable/ic_alarm"
+            android:title="提醒" />
         <item
             android:id="@+id/nav_send"
             android:icon="@drawable/ic_menu_send"
