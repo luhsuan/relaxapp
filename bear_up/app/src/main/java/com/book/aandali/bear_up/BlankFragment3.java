@@ -3,6 +3,7 @@ package com.book.aandali.bear_up;
 
 import android.app.ListActivity;
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
@@ -66,11 +67,37 @@ public class BlankFragment3 extends DialogFragment{
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+//                Audio audio = new Audio(context);
+//                audio.playmp301();
                 Toast.makeText(getActivity(),songs[position],Toast.LENGTH_SHORT).show();
             }
         });
 
         return view;
+    }
+
+    public class Audio {
+
+        MediaPlayer mp;
+        Context context;
+
+        public Audio(Context ct) {
+            this.context = ct;
+        }
+
+        public void playmp301() {
+            mp = MediaPlayer.create(context, R.raw.a);
+            mp.start();
+        }
+        public void playmp302() {
+            mp = MediaPlayer.create(context, R.raw.b);
+            mp.start();
+        }
+        public void playmp303() {
+            mp = MediaPlayer.create(context, R.raw.c);
+            mp.start();
+        }
     }
 
 }

@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity
                 switch (menuItemId) {
                     case R.id.bottomBarItemOne: {
                         fragNavController.switchTab(TAB_FIRST);
+                        setTitle(R.string.favorite);
                         BlankFragment4 fragment = new BlankFragment4();
                         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment, "fragment1");
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity
                     }
                     case R.id.bottomBarItemSecond: {
                         fragNavController.switchTab(TAB_SECOND);
+                        setTitle(R.string.alert);
                         BlankFragment5 fragment = new BlankFragment5();
                         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment, "fragment2");
@@ -84,6 +86,7 @@ public class MainActivity extends AppCompatActivity
                     }
                     case R.id.bottomBarItemThird: {
                         fragNavController.switchTab(TAB_THIRD);
+                        setTitle(R.string.main);
                         BlankFragment3 fragment = new BlankFragment3();
                         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                         fragmentTransaction.replace(R.id.frame, fragment, "fragment3");

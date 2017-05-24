@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.book.aandali.bear_up.BlankFragment4">
+    tools:context="com.book.aandali.bear_up.BlankFragment4"
+    android:background="@drawable/ic_favorite">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
