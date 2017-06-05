@@ -59,17 +59,17 @@ public class BlankFragment3 extends DialogFragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        View view=inflater.inflate(R.layout.voice3, container, false);
-       listView=(ListView) view.findViewById(R.id.list);
-        voice adapter=new voice(getActivity(),songs,imgbtn,imgbtnlove);
-        listView.setAdapter(adapter);
-        ImageButton btn  = (ImageButton)getView().findViewById(R.id.itemlove);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MediaPlayer paratha = MediaPlayer.create(context, R.raw.a);
-                paratha.start();
-            }
+//       listView=(ListView) view.findViewById(R.id.list);
+//        voice adapter=new voice(getActivity(),songs,imgbtn,imgbtnlove);
+//        listView.setAdapter(adapter);
+//        ImageButton btn  = (ImageButton)getView().findViewById(R.id.itemlove);
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                MediaPlayer paratha = MediaPlayer.create(context, R.raw.a);
+//                paratha.start();
+//            }
 //        ArrayAdapter<String> ListViewAdapter=new ArrayAdapter<String>(getActivity(),songs,imgbtn);
 
 //        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -81,7 +81,7 @@ public class BlankFragment3 extends DialogFragment{
 //                Toast.makeText(getActivity(),songs[position],Toast.LENGTH_SHORT).show();
 //            }
 //        });
-        });
+//        });
         return view;
             }
 
