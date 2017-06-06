@@ -4,16 +4,16 @@
     <group android:checkableBehavior="single" >
         <item
             android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_02_01"
             android:title="音樂" />
 
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_01_01"
             android:title="影片" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_03_01"
             android:title="語音" />
         <item
             android:id="@+id/nav_manage"
@@ -25,8 +25,9 @@
             android:title="提醒" />
         <item
             android:id="@+id/nav_send"
-            android:icon="@drawable/ic_menu_send"
+            android:icon="@drawable/ic_04_01"
             android:title="紀錄" />
+
     </group>
 
 
