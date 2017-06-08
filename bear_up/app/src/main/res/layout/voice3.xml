@@ -17,7 +17,8 @@ android:descendantFocusability="blocksDescendants" >
     把按钮背景设置为透明:     android:background="#00000000"
     把按钮背景设置为半透明:     android:background="#e0000000"
     -->
-<ImageButton
+
+    <ImageButton
     android:id="@+id/Itemplay"
     android:layout_alignParentRight="true"
     android:layout_alignTop="@+id/ItemWinName"
